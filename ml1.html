@@ -1,0 +1,121 @@
+<!DOCTYPE HTML>
+<!--
+	Massively by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Massively by HTML5 UP</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.4.0/styles/atom-one-dark.min.css">
+
+		<script src="https://cdn.jsdelivr.net/npm/highlightjs-line-numbers.js@2.8.0/dist/highlightjs-line-numbers.min.js"></script>
+	
+	</head>
+	<body class="is-preload">
+
+		<!-- Wrapper -->
+			<div id="wrapper" class="fade-in">
+
+
+				<!-- Header -->
+					<header id="header">
+						<a href="machinelearning.html" class="logo">ML Projects</a>
+					</header>
+
+				<!-- Nav -->
+					<nav id="nav">
+						<ul class="links">
+							<li class="active"><a href="machinelearning.html">ML Project - NN/CNN</a></li>
+						</ul>
+						<ul class="icons">
+							<li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
+							<li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
+							<li><a href="#" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
+							<li><a href="#" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
+						</ul>
+					</nav>
+
+				<!-- Main -->
+					<div id="main">
+
+						<!-- Featured Post -->
+						<div id="koongoshaf">Here I showcase a project where I developed a straightforward Neural Network (NN)
+							 model to address a supervised problem. The project is organized into <b><span style="color: rgb(239, 111, 7)">two</span></b> main segments.
+
+<br>In the <b><span style="color: rgb(239, 111, 7)">initial</span></b> phase, the NN model aims to tackle a regression problem 
+by approximating a basic function. The training dataset, containing 100 
+samples in the form of (x, y), is provided in an Excel file. Similarly, a 
+corresponding file holds our test data, which is utilized to assess the model's performance. As is customary in Neural Networks, the selection of the number of layers and neurons within each layer is a critical hyperparameter that requires tuning based on the network's objectives. Given the simplicity of the prediction task in this phase, I explore two NN configurations—one with a single hidden layer and another with two hidden layers. 
+The intention is to compare the performance of these two NNs and choose the one yielding more optimal results.
+
+For both training and testing the model, I employed the <b>PyTorch</b> library. Additionally, I utilized the <b>Optuna</b> library to optimize hyperparameters. The specific hyperparameters subjected to optimization include:<br>
+						1) Learning Rate<br> 2) Optimizer<br> 3) Number of Neurons in first and second layer<br>
+						Following the selection of the optimal model, I proceeded to retrain the model with and without <b>early stopping</b>, subsequently comparing the outcomes.
+
+						<br>In the <b><span style="color: rgb(239, 111, 7)">second</span></b> phase of the project, I addressed a classification problem by implementing both a Neural Network (NN) and a Convolutional Neural Network (CNN). The dataset employed for this segment comprises 60,000 images from the Fashion MNIST dataset. While Convolutional Neural Networks (CNNs) are typically favored for image-related tasks, the simplicity of the dataset allows for the consideration of a fully connected network as well. Unlike the prior phase, the number of layers in this segment remains constant and is not treated as a hyperparameter. The hyperparameters for this segment are as follows:						
+			  
+						<br>1) Number of filters of the first channel
+						<br>2) Number of filters of the second channel
+						<br>3) Optimizer ==========> ["SGD", "RAdam", "Adam"]
+						<br>4) Dropout probability (a regularization method)
+						<br>5) Number of neurons in the first fully connected layer
+						<br>6) Number of neurons in the second fully connected layer
+						<br>7) The momentum parameter in SGD optimizer (regularization method)
+						<br>8) L2 weight (regularization method)
+						<br>
+						<b><a href="https://github.com/amiramri0200/machineLearningProjects/tree/main/ML1" style="color: rgb(239, 111, 7)">HERE</a></b> you can see the source code of the project and results.
+						
+					</div>
+					<!--	<pre>
+							<code>!pip install optuna
+import pandas as pd
+import matplotlib.pyplot as plt
+import numpy as np
+import torch
+import torch.nn as nn
+import torch.optim as optim
+from torch.utils.data import Dataset, DataLoader,random_split, SubsetRandomSampler
+from torchvision import transforms
+from sklearn.model_selection import KFold
+from sklearn.model_selection import cross_val_score
+import torch.nn.functional as F
+from sklearn.model_selection import train_test_split
+import optuna</code>
+						</pre>
+						 Footer -->
+							<footer>
+								
+							</footer>
+
+					</div>
+
+				<!-- Footer -->
+					
+
+				<!-- Copyright -->
+					<div id="copyright">
+						
+					</div>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+			<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.4.0/highlight.min.js"></script>
+			<script>hljs.highlightAll();</script>
+			<script>
+				hljs.
+			</script>
+	</body>
+</html>
