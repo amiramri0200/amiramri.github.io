@@ -24,13 +24,13 @@
 
 				<!-- Header -->
 					<header id="header">
-						<a href="machinelearning.html" class="logo">ML Projects</a>
+						<a href="cv.html" class="logo">Computer Vision Projects</a>
 					</header>
 
 				<!-- Nav -->
 					<nav id="nav">
 						<ul class="links">
-							<li class="active"><a>ML Project - Deep Reinforcement Learning</a></li>
+							<li class="active"><a href="machinelearning.html">Computer Vision Project - Equalisation & Denoising</a></li>
 						</ul>
 						<ul class="icons">
 							<li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
@@ -42,12 +42,21 @@
 
 				<!-- Main -->
 					<div id="main">
-						In this Project, our focus is on training a Deep Reinforcement Learning network within the Gym environment. 
-						The selected game for this task is Cart Pole.
-						 In the initial section, we analyze and compare the impact of two distinct exploration profiles—Softmax and Epsilon-Greedy policies—on the learning curve of the Reinforcement Learning (RL) agent.
 
-Moving on to the second segment of the assignment, we train the RL agent for the Cart Pole problem once again. However, this time, we alter the observation space. In this part, the observation space comprises the screen pixels of the environment.<br><b><a href="https://github.com/amiramri0200/machineLearningProjects/tree/main/ML3/HW3AmirHosseinMohammadAmri/code" style="color: rgb(239, 111, 7)">HERE</a></b> you can see the source code of the project and results.
-						
+						<!-- Featured Post -->
+						<div ><h2><span style="color: rgb(239, 111, 7)">Part 1:</span> Histogram Equalization
+						</h2>Write a C++ software that:
+						<br> &nbsp;&nbsp;   1)Loads an image
+						<br>&nbsp;&nbsp;    2)Prints the histograms of the image with 256 bins and [0, 255] as range
+						<br>  &nbsp;&nbsp;  3)Equalizes separately the R, G and B channels
+						<br>  &nbsp;&nbsp;  4)Shows the equalized image and the histogram of its channels
+						<h2><span style="color: rgb(239, 111, 7)">Part 2:</span> Image Filtering</h2>
+							Generate a denoised version of the image trying different filters and parameter values.
+							<br> <b>Requested Filters:<br></b>
+							&nbsp;&nbsp;&nbsp;cv::medianFilter()<br>
+							&nbsp;&nbsp;&nbsp;cv::GaussianBlur()<br>
+							&nbsp;&nbsp;&nbsp;cv::bilateralFilter()<br>
+							<br><b><a href="https://github.com/amiramri0200/machineLearningProjects/tree/main/ML1" style="color: rgb(239, 111, 7)">HERE</a></b> you can see the source code of the project and results.
 					</div>
 					<!--	<pre>
 							<code>!pip install optuna

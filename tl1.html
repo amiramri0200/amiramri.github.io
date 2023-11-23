@@ -30,7 +30,7 @@
 				<!-- Nav -->
 					<nav id="nav">
 						<ul class="links">
-							<li class="active"><a>ML Project - Deep Reinforcement Learning</a></li>
+							<li class="active"><a href="machinelearning.html">ML Project - NN/CNN</a></li>
 						</ul>
 						<ul class="icons">
 							<li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
@@ -42,11 +42,25 @@
 
 				<!-- Main -->
 					<div id="main">
-						In this Project, our focus is on training a Deep Reinforcement Learning network within the Gym environment. 
-						The selected game for this task is Cart Pole.
-						 In the initial section, we analyze and compare the impact of two distinct exploration profiles—Softmax and Epsilon-Greedy policies—on the learning curve of the Reinforcement Learning (RL) agent.
+						During the course Numerical Optimization Mehtod I develope an Implemention of a number of Optimization algorithms.<br>
+						<h3>Newton Method</h3>
+						<!-- Featured Post -->
+						Newton's optimization method, is an iterative numerical technique used for optimizing a function to find its minimum or maximum.
 
-Moving on to the second segment of the assignment, we train the RL agent for the Cart Pole problem once again. However, this time, we alter the observation space. In this part, the observation space comprises the screen pixels of the environment.<br><b><a href="https://github.com/amiramri0200/machineLearningProjects/tree/main/ML3/HW3AmirHosseinMohammadAmri/code" style="color: rgb(239, 111, 7)">HERE</a></b> you can see the source code of the project and results.
+The method is based on the idea of using local linear approximations to iteratively approach the root or extremum of a function. Starting with an initial guess, the algorithm updates the guess by considering the slope (derivative) and curvature (second derivative) of the function at the current point. 
+<br> In this Project This optimization method is implemented in Matlab.
+<h3>BFGS & Linesearch</h3>
+BFGS is a widely used iterative optimization algorithm designed to find the minimum of a differentiable, scalar-valued function. Unlike Newton's method, BFGS does not require the calculation of second derivatives (Hessian matrix) and is particularly well-suited for large-scale optimization problems.
+
+The primary idea behind BFGS is to iteratively update an approximation of the inverse Hessian matrix, which is used to direct the search for the minimum. The algorithm maintains an estimate of the Hessian's inverse throughout the iterations, adjusting it based on the gradient information obtained from the function. 
+<br>
+
+Line search is a critical component of optimization algorithms like BFGS. After obtaining a search direction from the inverse Hessian approximation, a line search is performed to determine the step size along that direction. The goal is to find the step size that minimizes the objective function along the search direction.
+
+In a nutshell, the BFGS algorithm iteratively refines its estimate of the inverse Hessian matrix and
+ performs a line search to determine the step size along the search direction.
+  This combination of updates and line search helps efficiently navigate the parameter space toward the optimal solution.
+						<br><b><a href="https://github.com/amiramri0200/machineLearningProjects/tree/main/ML1" style="color: rgb(239, 111, 7)">HERE</a></b> you can see the source code of the project and results.
 						
 					</div>
 					<!--	<pre>
