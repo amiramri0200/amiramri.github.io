@@ -1,86 +1,105 @@
 <!DOCTYPE HTML>
-<!--
-	Massively by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
--->
 <html>
 	<head>
-		<title>About - Amir Amri</title>
+		<title>About - Amir Hossein Mohammad Amri</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+		
 		<style>
-			/* Circular profile image styling */
-			.profile-image {
-				width: 200px;
-				height: 200px;
+			.profile-container {
+				display: flex;
+				align-items: center;
+				gap: 25px;
+				margin: 2rem 0;
+				flex-wrap: wrap;
+			}
+			.profile-pic {
+				width: 180px;
+				height: 180px;
 				border-radius: 50%;
 				object-fit: cover;
-				display: block;
-				margin: 20px auto 30px auto;
-				border: 4px solid #ef6f07;
-				box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+				border: 5px solid #ef6f07;
+				box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+				flex-shrink: 0;
+			}
+			@media (max-width: 736px) {
+				.profile-container { justify-content: center; text-align: center; }
+				.profile-pic { width: 150px; height: 150px; }
 			}
 		</style>
 	</head>
+	
 	<body class="is-preload">
+		<div id="wrapper">
 
-		<!-- Wrapper -->
-			<div id="wrapper">
+			<header id="header">
+				<a href="index.html" class="logo">M</a>
+			</header>
 
-				<!-- Header -->
-					<header id="header">
-						<a href="index.html" class="logo">M</a>
+			<nav id="nav">
+				<ul class="links">
+					<li><a href="index.html">Projects</a></li>
+					<li class="active"><a href="generic.html">About</a></li>
+					<li><a href="elements.html">Elements Reference</a></li>
+				</ul>
+				<ul class="icons">
+					<li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
+					<li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
+					<li><a href="#" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
+					<li><a href="https://github.com/amiramri0200" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
+				</ul>
+			</nav>
+
+			<div id="main">
+				<section class="post">
+					<header class="major">
+						<h1>Amir Hossein Mohammad Amri</h1>
+						
+						<!-- CIRCULAR PHOTO + SHORT BIO -->
+						<div class="profile-container">
+							<img src="images/your-photo.jpg" alt="Amir Hossein Mohammad Amri" class="profile-pic">
+							<div>
+								<p>
+									MSc Student in Information & Communication Technology (Telecommunication) <br>
+									<strong>Università degli Studi di Padova</strong>, Italy
+								</p>
+							</div>
+						</div>
 					</header>
 
-				<!-- Nav -->
-					<nav id="nav">
-						<ul class="links">
-							<li><a href="index.html">Projects</a></li>
-							<li class="active"><a href="generic.html">About</a></li>
-							<li><a href="elements.html">Elements Reference</a></li>
-						</ul>
-						<ul class="icons">
-							<li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
-							<li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
-							<li><a href="#" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
-							<li><a href="#" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
-						</ul>
-					</nav>
+					<p>
+						I earned my Bachelor's degree in Electrical Engineering from 
+						<strong>K. N. Toosi University of Technology</strong> — one of Iran's top five engineering schools — 
+						where I focused on Telecommunications and Electronics alongside outstanding professors and peers. 
+						During this time I fell in love with programming (C/C++, Python, MATLAB) and embedded systems 
+						(ARM Cortex, FPGA).
+					</p>
 
-				<!-- Main -->
-					<div id="main">
-						<!-- Post -->
-							<section class="post">
-								<header class="major">
-									<span class="date">Amir Hossein Mohammad Amri</span>
-								</header>
-								
-								<!-- Circular Profile Image -->
-								<img src="images/your-photo.jpg" alt="Amir Amri" class="profile-image" />
-								
-								<!-- About Text -->
-								<p>
-									In my undergraduate studies, I studied electrical engineering at 
-									<a href="https://www.topuniversities.com/universities/k-n-toosi-university-technology" style="color: rgb(239, 111, 7)">KNTU University</a>, one of the top five engineering institutions in Iran. While being guided by eminent professors and in the company of diligent classmates, I immersed myself in Telecommunications and Electronic courses, areas of interest to me. The diverse projects undertaken during my studies exposed me to various software and programming languages, including C/C++, Python, and Matlab. I also found joy in programming electronic boards like ARM Cortex and FPGA boards.
-								</p>
-								<p>
-									For my master's degree, I am currently enrolled in Information Communication Technology (ICT) at the <a href="https://www.topuniversities.com/universities/universita-di-padova" style="color: rgb(239, 111, 7)">University of Padova</a>, specializing in Telecommunication. This academic journey has included impactful courses such as Computer Vision, Machine Learning, Neural Networks, 5G, and Wireless Networks, providing me with a comprehensive understanding of diverse aspects within the field. Notably, in the "Programming for Telecommunication" course, I significantly expanded my proficiency in C++ programming language and gained expertise in utilizing the Git tool.
-								</p>
-							</section>
-					</div>
+					<p>
+						Currently, I am pursuing my Master's in ICT for Telecommunication at the 
+						<strong>University of Padova</strong>, ranked among the top 150 universities worldwide. 
+						My coursework includes Computer Vision, Machine Learning, Deep Learning, 5G Networks, 
+						and Advanced Wireless Communications. I particularly strengthened my C++ skills and 
+						mastered Git/version-control in the "Programming for Telecommunication" course.
+					</p>
+
+					<p>
+						I’m passionate about the intersection of wireless communications, signal processing, 
+						and machine learning — and I’m actively looking for PhD/research opportunities in these areas.
+					</p>
+
+				</section>
 			</div>
+		</div>
 
-		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/jquery.scrollex.min.js"></script>
-			<script src="assets/js/jquery.scrolly.min.js"></script>
-			<script src="assets/js/browser.min.js"></script>
-			<script src="assets/js/breakpoints.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
-
+		<script src="assets/js/jquery.min.js"></script>
+		<script src="assets/js/jquery.scrollex.min.js"></script>
+		<script src="assets/js/jquery.scrolly.min.js"></script>
+		<script src="assets/js/browser.min.js"></script>
+		<script src="assets/js/breakpoints.min.js"></script>
+		<script src="assets/js/util.js"></script>
+		<script src="assets/js/main.js"></script>
 	</body>
 </html>
