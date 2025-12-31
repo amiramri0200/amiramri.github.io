@@ -1,73 +1,201 @@
 <!DOCTYPE HTML>
+<!--
+	Massively by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
 <html>
 	<head>
-		<title>RL-based 5G/6G Scheduler - Amir Amri</title>
+		<title>Internship Experience - Amir Amri</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+		
+		<!-- SYNTAX HIGHLIGHTING FOR CODE BLOCKS -->
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/atom-one-dark.min.css">
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+		<script>hljs.highlightAll();</script>
+
 		<style>
-			.highlight { background:#ef6f07; color:white; padding:2px 8px; border-radius:4px; font-size:0.9rem; }
+			/* Optional: Custom style to make code block look cleaner */
+			pre {
+				border-radius: 8px;
+				margin-bottom: 2rem;
+				border: 1px solid #444;
+			}
 		</style>
 	</head>
 	<body class="is-preload">
+
 		<div id="wrapper">
-			<header id="header"><a href="index.html" class="logo">Amir Amri</a></header>
+
+			<!-- Header -->
+			<header id="header">
+				<a href="index.html" class="logo">AMIR AMRI</a>
+			</header>
+
+			<!-- Nav -->
 			<nav id="nav">
 				<ul class="links">
 					<li><a href="index.html">Projects</a></li>
+					<li class="active"><a href="internship.html">Internship Experience</a></li>
 					<li><a href="generic.html">About</a></li>
-					<li class="active"><a href="fraunhofer-rl-scheduler.html">RL Scheduler @ Fraunhofer</a></li>
+				</ul>
+				<ul class="icons">
+					<li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
+					<li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
+					<li><a href="#" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
+					<li><a href="https://github.com/amiramri0200" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
 				</ul>
 			</nav>
 
+			<!-- Main -->
 			<div id="main">
-				<article class="post">
+
+				<section class="post">
 					<header class="major">
-						<h1>Reinforcement Learning for<br>Dynamic 5G/6G Resource Scheduling</h1>
-						<p style="font-size:1.3rem; color:#ef6f07;">
-							Research Intern @ Fraunhofer IIS, Erlangen, Germany<br>
-							<strong>July – September 2025</strong>
-						</p>
+						<span class="date">Fraunhofer IIS, Germany</span>
+						<h1>Research Internship<br />Experience</h1>
+						<p>Bridging the gap between 5G Network Simulation <br />
+						and Deep Reinforcement Learning.</p>
 					</header>
 
-					<p>This is the most advanced project I have ever built — and one of the few <strong>real-time RL-in-the-loop network simulators</strong> running at a leading European research institute.</p>
+					<!-- Main Image -->
+					<div class="image main"><img src="images/fraunhofer_logo.jpg" alt="Fraunhofer IIS Research" /></div>
 
-					<h2>Key Achievements</h2>
+					<p>During my Master's studies, I worked as a Research Intern at <strong>Fraunhofer IIS</strong> (Germany) for two periods. My research focused on integrating AI with telecommunications infrastructure to optimize 5G/6G network scheduling.</p>
+
+					<hr />
+
+					<!-- Phase 2 (Most Recent) -->
+					<h2>Phase 2: Wireless Communications & ML</h2>
+					<p><strong>Jul 2025 - Sep 2025</strong></p>
+					<p>In this role, I focused on high-performance integration of Machine Learning agents with network simulators.</p>
 					<ul>
-						<li>Designed and implemented a <strong>zero-copy, sub-millisecond bidirectional bridge</strong> between OMNeT++ (C++) and Python using POSIX shared memory + semaphores</li>
-						<li>Enabled <strong>real-time closed-loop control</strong>: OMNeT++ sends network state → RL agent decides scheduling → action instantly applied in simulation</li>
-						<li>RL agents (DQN, Actor-Critic, PPO) outperform state-of-the-art classical schedulers by <strong>28% in sum-rate</strong> and <strong>41% in fairness</strong></li>
-						<li>Code is <strong>production-grade</strong>: full error handling, timeouts, magic numbers, RAII, debugging tools — currently being integrated into Fraunhofer's internal 6G testbed</li>
+						<li><strong>5G Scheduling:</strong> Designed scheduling frameworks using OMNeT++ and Python.</li>
+						<li><strong>RL Integration:</strong> Developed a custom API to connect OMNeT++ with <strong>OpenAI Gym</strong> for training Reinforcement Learning agents.</li>
+						<li><strong>Algorithm Design:</strong> Implemented network control algorithms combining signal processing with machine learning.</li>
 					</ul>
 
-					<h2>Technical Highlights</h2>
+					<hr />
+
+					<!-- TECHNICAL DEEP DIVE SECTION -->
+					<h3>Technical Deep Dive: Custom IPC Bridge</h3>
+					<p>
+						One of the core challenges was connecting the <strong>OMNeT++</strong> network simulator (C++) with <strong>Python</strong> Machine Learning libraries (PyTorch) without the high latency of TCP sockets.
+					</p>
+					<p>
+						To solve this, I engineered a low-level <strong>Inter-Process Communication (IPC)</strong> bridge using POSIX Shared Memory and Semaphores. This allowed for near-instantaneous state transfer between the C++ simulation environment and the Python training loop.
+					</p>
+
+					<!-- CODE BLOCK -->
+					<h4>Core C++ Implementation (Snippet)</h4>
+					<p>Below is a snippet of the custom header file I developed to handle the memory mapping and synchronization:</p>
+					
+					<pre><code class="language-cpp">
+// Shared Data Structure (resides in RAM, accessible by both C++ and Python)
+struct SharedBridgeData {
+    int current_observation;    // State observation from Simulator
+    int current_action;         // Action decided by RL Agent
+    volatile bool obs_ready;    // Sync Flag
+    volatile bool action_ready; // Sync Flag
+    
+    // Process IDs for debugging
+    int omnet_pid;             
+    int python_pid;            
+};
+
+class SharedMemoryBridge {
+public:
+    SharedMemoryBridge(bool is_creator) {
+        // 1. Create/Open POSIX Shared Memory
+        // O_CREAT | O_EXCL ensures we control the creation lifecycle
+        shm_fd = shm_open(SHM_NAME, O_CREAT | O_RDWR, 0666);
+        
+        // 2. Map Shared Memory into Process Address Space (Zero-Copy)
+        shared_data = static_cast<SharedBridgeData*>(
+            mmap(nullptr, sizeof(SharedBridgeData), 
+            PROT_READ | PROT_WRITE, MAP_SHARED, shm_fd, 0)
+        );
+
+        // 3. Initialize Semaphores for precise synchronization
+        obs_semaphore = sem_open(OBS_SEM_NAME, O_CREAT, 0666, 0);
+        action_semaphore = sem_open(ACT_SEM_NAME, O_CREAT, 0666, 0);
+        
+        std::cout << "[SharedBridge] Initialized (PID: " << getpid() << ")" << std::endl;
+    }
+
+    // Example: Method to send observation to Python
+    void send_observation(int obs, float rew, bool d) {
+        shared_data->current_observation = obs;
+        shared_data->obs_ready = true;
+        
+        // Memory barrier to ensure writes are visible
+        __sync_synchronize(); 
+        
+        // Signal Python process to wake up
+        sem_post(obs_semaphore);
+    }
+};
+					</code></pre>
+					
+					<p>This implementation utilized <code>mmap</code> for zero-copy data access and <code>sem_wait</code>/<code>sem_post</code> for precise synchronization, ensuring the reinforcement learning training pipeline was not bottlenecked by data transfer speeds.</p>
+
+					<hr />
+
+					<!-- Phase 1 -->
+					<h2>Phase 1: Network Simulation</h2>
+					<p><strong>Feb 2024 - May 2024</strong></p>
+					<p>My initial internship focused on the fundamental mathematical modeling of network performance.</p>
 					<ul>
-						<li>Custom shared memory protocol with version checking and liveness detection</li>
-						<li>Full support for reward, done, reset signals (OpenAI Gym compatible)</li>
-						<li>Successfully trained agents on 50–100 step episodes in real-time (no slowdown)</li>
-						<li>Visualized results with live Matplotlib plots during simulation</li>
+						<li><strong>System-Level Simulation:</strong> Performed simulations to analyze wireless network performance metrics.</li>
+						<li><strong>Mathematical Modeling:</strong> Applied mathematical models to optimize resource allocation strategies within the network.</li>
 					</ul>
 
-					<h2>Results (selected plots)</h2>
-					<p><em>(I will upload these this week — they are stunning)</em></p>
-					<!-- Add your plots here when ready -->
-					<p style="text-align:center;">
-						<img src="images/rl-scheduler-plot1.png" alt="RL vs Classical Scheduler" style="max-width:100%; border:1px solid #333;">
-					</p>
+					<hr />
 
-					<hr>
+					<!-- Reference Letter Section -->
+					<h3>Reference Letter</h3>
+					<p>My supervisor, <strong>Moustafa Roshdi</strong>, provided a reference letter detailing my contributions, technical skills, and research performance during my time at Fraunhofer IIS.</p>
+					
+					<ul class="actions">
+						<!-- Make sure reference_letter.pdf is inside the 'assets' folder -->
+						<li><a href="assets/reference_letter.pdf" target="_blank" class="button primary icon solid fa-download">Download Reference Letter</a></li>
+					</ul>
 
-					<p style="text-align:center; font-size:1.1rem;">
-						This project alone has already opened PhD discussions with three top-10 European groups.<br>
-						<strong>Yes — it’s that good.</strong>
-					</p>
+				</section>
 
-					<p style="text-align:center;">
-						← <a href="index.html">Back to all projects</a>
-					</p>
-				</article>
 			</div>
+
+			<!-- Footer -->
+			<footer id="footer">
+				<section class="split contact">
+					<section class="alt">
+						<h3>Address</h3>
+						<p>Via Monte Cengio 19<br />
+						35138 Padova, Italy</p>
+					</section>
+					<section>
+						<h3>Email</h3>
+						<p><a href="mailto:amiramri0200@gmail.com">amiramri0200@gmail.com</a></p>
+					</section>
+				</section>
+				<div id="copyright">
+					<ul><li>&copy; Amir Amri</li><li>Design: <a href="https://html5up.net">HTML5 UP</a></li></ul>
+				</div>
+			</footer>
+
 		</div>
+
+		<!-- Scripts -->
+		<script src="assets/js/jquery.min.js"></script>
+		<script src="assets/js/jquery.scrollex.min.js"></script>
+		<script src="assets/js/jquery.scrolly.min.js"></script>
+		<script src="assets/js/browser.min.js"></script>
+		<script src="assets/js/breakpoints.min.js"></script>
+		<script src="assets/js/util.js"></script>
+		<script src="assets/js/main.js"></script>
+
 	</body>
 </html>
