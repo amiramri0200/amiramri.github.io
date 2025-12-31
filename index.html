@@ -6,13 +6,11 @@
 -->
 <html>
 	<head>
-		<title>Projects & Experience - Amir Amri</title>
+		<title>Projects - Amir Amri</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
-		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.4.0/styles/atom-one-dark.min.css">
-		<script src="https://cdn.jsdelivr.net/npm/highlightjs-line-numbers.js@2.8.0/dist/highlightjs-line-numbers.min.js"></script>
 	</head>
 	<body class="is-preload">
 
@@ -37,7 +35,7 @@
 				<!-- Nav -->
 					<nav id="nav">
 						<ul class="links">
-							<li class="active"><a href="index.html">Projects & Experience</a></li>
+							<li class="active"><a href="index.html">Projects</a></li>
 							<li><a href="generic.html">About</a></li>
 							<li><a href="elements.html">Elements Reference</a></li>
 						</ul>
@@ -51,77 +49,111 @@
 
 				<!-- Main -->
 					<div id="main">
-						
-						<!-- Featured Post / Introduction -->
+
+						<!-- Featured Post (Optional intro text) -->
 						<article class="post featured">
 							<header class="major">
-								<h2>Research &<br />Work Experience</h2>
-								<p>My journey in Telecommunications and AI research.</p>
+								<h2>Portfolio of Work</h2>
+								<p>A collection of my projects in Machine Learning, Telecommunications, <br />
+								Computer Vision, and my professional research experience.</p>
 							</header>
-							<a href="internship.html" class="image main"><img src="images/fraunhofer_logo.jpg" alt="Fraunhofer IIS" /></a> <!-- Make sure to add a logo image -->
-							<ul class="actions special">
-								<li><a href="internship.html" class="button large">View Internship Details</a></li>
-							</ul>
 						</article>
 
-						<!-- Project Lists -->
+						<!-- Project Cards Container -->
 						<section class="posts">
-							<article>
-								<header>
-									<h2><a href="#">Work Experience</a></h2>
-								</header>
-								<p>
-									<strong>Fraunhofer IIS, Germany (2024 - 2025)</strong><br>
-									Research Intern focusing on Wireless Communications, Network Simulation, and 5G scheduling using OMNeT++ and Reinforcement Learning.
-								</p>
-								<ul class="actions special">
-									<li><a href="internship.html" class="button">Read More & Reference Letter</a></li>
-								</ul>
-							</article>
-
+							
+							<!-- Machine Learning -->
 							<article>
 								<header>
 									<h2><a href="#">Machine Learning</a></h2>
 								</header>
 								<p>
-									1) <a href="./ml1.html">NN and CNN for regression tasks</a><br>
-									2) <a href="./ml2.html">Convolutional Autoencoder & VAE</a><br>
-									3) <a href="./ml3.html">Reinforcement Learning (Cart Pole)</a>
+									1) <a href="./ml1.html">NN and CNN for regression</a><br>
+									2) <a href="./ml2.html">Conv Autoencoder & VAE</a><br>
+									3) <a href="./ml3.html">RL (Cart Pole)</a>
 								</p>
+								<ul class="actions special">
+									<li><a href="machinelearning.html" class="button">View ML Projects</a></li>
+								</ul>
 							</article>
 
+							<!-- Telecommunications -->
 							<article>
 								<header>
 									<h2><a href="#">Telecommunications</a></h2>
 								</header>
 								<p>
-									1) <a href="./tl1.html">Newton Optimization in Matlab</a><br>
+									1) <a href="./tl1.html">Newton Optimization (Matlab)</a><br>
 									2) <a href="./tl2.html">Computer Network Projects</a>
 								</p>
+								<ul class="actions special">
+									<li><a href="#" class="button">View Telecom Projects</a></li>
+								</ul>
 							</article>
 
+							<!-- Computer Vision -->
 							<article>
 								<header>
 									<h2><a href="#">Computer Vision</a></h2>
 								</header>
 								<p>
-									1) <a href="./cv1.html">Histogram Equalization & Filtering</a><br>
+									1) <a href="./cv1.html">Histogram Equalization</a><br>
 									2) <a href="./cv2.html">Image Mosaicing</a>
 								</p>
+								<ul class="actions special">
+									<li><a href="#" class="button">View CV Projects</a></li>
+								</ul>
 							</article>
+
+							<!-- Filler (to keep grid balanced, or you can remove this) -->
+							<article>
+								<header>
+									<h2><a href="#">Master's Thesis</a></h2>
+								</header>
+								<p>Ultra Wideband Channel Sensing Using WiFi Signals.</p>
+								<ul class="actions special">
+									<li><a href="generic.html" class="button">Read About Me</a></li>
+								</ul>
+							</article>
+
+							<!-- INTERNSHIP 1: Wireless Comms (Most Recent) -->
+							<article>
+								<header>
+									<span class="date">Jul 2025 - Sep 2025</span>
+									<h2><a href="internship.html">Internship:<br />
+									Wireless Comms & ML</a></h2>
+								</header>
+								<a href="internship.html" class="image fit"><img src="images/fraunhofer_logo.jpg" alt="Fraunhofer" /></a>
+								<p>Designed 5G scheduling frameworks using OMNeT++ and integrated OpenAI Gym for Reinforcement Learning based scheduling at Fraunhofer IIS.</p>
+								<ul class="actions special">
+									<li><a href="internship.html" class="button">View Details</a></li>
+								</ul>
+							</article>
+
+							<!-- INTERNSHIP 2: Network Sim (Previous) -->
+							<article>
+								<header>
+									<span class="date">Feb 2024 - May 2024</span>
+									<h2><a href="internship.html">Internship:<br />
+									Network Simulation</a></h2>
+								</header>
+								<a href="internship.html" class="image fit"><img src="images/fraunhofer_logo.jpg" alt="Fraunhofer" /></a>
+								<p>Performed system-level simulations for analyzing wireless network performance and applied mathematical modeling for resource allocation.</p>
+								<ul class="actions special">
+									<li><a href="internship.html" class="button">View Details</a></li>
+								</ul>
+							</article>
+
 						</section>
 
 					</div>
 
 				<!-- Footer -->
 					<footer id="footer">
-						<!-- Add footer content if needed -->
+						<div id="copyright">
+							<ul><li>&copy; Amir Amri</li></ul>
+						</div>
 					</footer>
-
-				<!-- Copyright -->
-					<div id="copyright">
-						<ul><li>&copy; Amir Amri</li><li>Design: <a href="https://html5up.net">HTML5 UP</a></li></ul>
-					</div>
 
 			</div>
 
@@ -133,8 +165,6 @@
 			<script src="assets/js/breakpoints.min.js"></script>
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
-			<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.4.0/highlight.min.js"></script>
-			<script>hljs.highlightAll();</script>
 
 	</body>
 </html>
